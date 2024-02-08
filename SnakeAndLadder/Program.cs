@@ -5,7 +5,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welocme to Snake Ladder Problem");
+        //Initializing player's position to 0
+        int PlayerPosition = 0;
+
     }
 }
 

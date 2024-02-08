@@ -12,3 +12,4 @@ C:\Users\prana\Desktop\BridgeLabz\SnakeAndLadder\SnakeAndLadder\obj\Debug\net8.0
 C:\Users\prana\Desktop\BridgeLabz\SnakeAndLadder\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.pdb
 C:\Users\prana\Desktop\BridgeLabz\SnakeAndLadder\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.genruntimeconfig.cache
 C:\Users\prana\Desktop\BridgeLabz\SnakeAndLadder\SnakeAndLadder\obj\Debug\net8.0\ref\SnakeAndLadder.dll
+C:\Users\prana\Desktop\BridgeLabz\SnakeAndLadder\SnakeAndLadder\obj\Debug\net8.0\SnakeAndLadder.sourcelink.json
