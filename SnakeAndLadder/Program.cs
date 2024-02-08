@@ -13,12 +13,13 @@ class Program
         
         Random random = new Random();
 
-        
+        int countOfDieThrows = 0;
 
         while(playerPosition < 100)
         {
             int valueOnDie = random.Next(1, 7);
             Console.WriteLine("Value on Die : " + valueOnDie);
+            countOfDieThrows++;
 
             int option = random.Next(0, 3);
             Console.WriteLine("Option : " + option);
@@ -48,9 +49,12 @@ class Program
             }
             Console.WriteLine("Player's new position : " + playerPosition);
             Console.WriteLine("-------------------------------------");
+            
         }
-        
-       
+
+        Console.WriteLine("Number of times the die was played : " + countOfDieThrows);
+
+
     }
 }
 
