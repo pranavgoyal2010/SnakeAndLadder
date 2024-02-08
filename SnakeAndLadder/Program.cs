@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
+using System.Transactions;
 
 namespace SnakeAndLadder;
 
@@ -7,16 +8,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Initializing player's position to 0
-        int playerPosition = 0;
-        Console.WriteLine("Player's current position : " + playerPosition);
-        
+
+
+
+        /*Console.WriteLine(player1.ToString() + " current position : " + player1.PlayerPosition);
+        Console.WriteLine(player2.ToString() + " current position : " + player2.PlayerPosition);
+
         Random random = new Random();
 
         int countOfDieThrows = 0;
+        
+        int currentPlayer = 0;
 
-        while(playerPosition < 100)
+        while(player1.PlayerPosition<100 && player2.PlayerPosition<100)
         {
+            //Console.WriteLine();
             int valueOnDie = random.Next(1, 7);
             Console.WriteLine("Value on Die : " + valueOnDie);
             countOfDieThrows++;
@@ -31,10 +37,14 @@ class Program
                     break;
                 case 1:  //option is ladder
                     Console.WriteLine("Encountered Ladder");
-                    if (playerPosition + valueOnDie <= 100)
-                        playerPosition += valueOnDie;
-                    else
-                        Console.WriteLine("Can't go above 100");
+                    
+                    if(currentPlayer==0)
+                    
+                    player1.PlayerPosition += valueOnDie;
+                    
+                    if (player1.PlayerPosition > 100)
+                        player1.PlayerPosition -= valueOnDie;
+                    
                     break;
                 case 2:  //option is snake
                     Console.WriteLine("Encountered Snake");
@@ -52,9 +62,10 @@ class Program
             
         }
 
-        Console.WriteLine("Number of times the die was played : " + countOfDieThrows);
+        Console.WriteLine("Number of times the die was played : " + countOfDieThrows);*/
 
-
+        Game game = new Game(2);
+        game.Play();
     }
 }
 
