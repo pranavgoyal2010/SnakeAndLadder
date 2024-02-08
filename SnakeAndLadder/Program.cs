@@ -29,8 +29,11 @@ class Program
                     Console.WriteLine("No Play");
                     break;
                 case 1:  //option is ladder
-                    Console.WriteLine("Encountered Ladder");                    
-                    playerPosition += valueOnDie;
+                    Console.WriteLine("Encountered Ladder");
+                    if (playerPosition + valueOnDie <= 100)
+                        playerPosition += valueOnDie;
+                    else
+                        Console.WriteLine("Can't go above 100");
                     break;
                 case 2:  //option is snake
                     Console.WriteLine("Encountered Snake");
@@ -38,6 +41,7 @@ class Program
                         playerPosition -= valueOnDie;
                     else
                         playerPosition = 0;
+                        
 
                     break;
                 
