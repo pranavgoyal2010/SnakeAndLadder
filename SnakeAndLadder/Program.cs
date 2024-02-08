@@ -13,31 +13,41 @@ class Program
         
         Random random = new Random();
 
-        int valueOnDie = random.Next(1,7);
-        Console.WriteLine("Value on Die : " + valueOnDie);
+        
 
-        int option = random.Next(0, 3);
-        Console.WriteLine("Option : " + option);
-
-        switch(option) 
+        while(playerPosition < 100)
         {
-            case 0:  //option is no play
-                Console.WriteLine("No Play");
-                break;
-            case 1:  //option is ladder
-                Console.WriteLine("Encountered Ladder");
-                if(playerPosition + valueOnDie <= 100)
-                    playerPosition += valueOnDie;
-                break;
-            case 2:  //option is snake
-                Console.WriteLine("Encountered Snake");
-                if(playerPosition - valueOnDie >= 0)
-                    playerPosition -= valueOnDie;
-                break;
+            int valueOnDie = random.Next(1, 7);
+            Console.WriteLine("Value on Die : " + valueOnDie);
+
+            int option = random.Next(0, 3);
+            Console.WriteLine("Option : " + option);
+
+            switch (option)
+            {
+                case 0:  //option is no play
+                    Console.WriteLine("No Play");
+                    break;
+                case 1:  //option is ladder
+                    Console.WriteLine("Encountered Ladder");
+                    if (playerPosition + valueOnDie <= 100)
+                        playerPosition += valueOnDie;
+                    break;
+                case 2:  //option is snake
+                    Console.WriteLine("Encountered Snake");
+                    if (playerPosition - valueOnDie >= 0)
+                        playerPosition -= valueOnDie;
+                    else
+                        playerPosition = 0;
+
+                    break;
+                
+            }
+            Console.WriteLine("Player's new position : " + playerPosition);
+            Console.WriteLine("-------------------------------------");
         }
         
-        
-        Console.WriteLine("Player's new position : " + playerPosition);
+       
     }
 }
 
